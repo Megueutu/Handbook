@@ -8,6 +8,7 @@ My personal collection of reusable agent skills. The instructions focus on decis
 | --- | --- |
 | [drdw](skills/drdw/SKILL.md) | Check existing solutions and weigh reuse against custom implementation. |
 | [expert-designer](skills/expert-designer/SKILL.md) | Compare distinct static HTML interface prototypes outside the product repository, with a local server and links between attempts. |
+| [ill-sleep](skills/ill-sleep/SKILL.md) | Complete authorized work without routine confirmation checkpoints, with subagent coordination, verification, and honest blocker reporting. |
 
 ## Use
 
@@ -18,9 +19,12 @@ For example, with Codex's skill installer, request:
 ```text
 Install drdw from megueutu/handbook at skills/drdw.
 Install expert-designer from megueutu/handbook at skills/expert-designer.
+Install ill-sleep from megueutu/handbook at skills/ill-sleep.
 ```
 
-Once installed in Codex, explicitly invoke `$drdw` or `$expert-designer`. Other harnesses may use different installation locations and invocation syntax. The skill descriptions also specify when an agent should consider them automatically, where supported.
+Once installed in Codex, explicitly invoke `$drdw`, `$expert-designer`, or `$ill-sleep`. Other harnesses may use different installation locations and invocation syntax. The skill descriptions also specify when an agent should consider them automatically, where supported.
+
+For example: `Use $ill-sleep to implement the agreed plan, run the relevant checks, and finish all authorized steps while I am away.` This removes routine confirmation checkpoints; it does not change permissions, guarantee an overnight runtime, or authorize extra external actions. Subagents are used when available and useful, with sequential execution as a fallback.
 
 The skills use tools already available in the environment and do not require a bundled MCP server, framework, or runtime. Prototype exploration needs a usable static HTTP server; browser inspection depends on the harness's available browser tools.
 
