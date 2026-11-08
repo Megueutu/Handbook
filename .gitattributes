@@ -1,0 +1,2 @@
+# Markdown is the source language of this skill collection.
+*.md linguist-language=Markdown linguist-detectable=true linguist-documentation=false
